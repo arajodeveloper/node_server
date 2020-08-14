@@ -34,12 +34,12 @@
 ---
 
 ## What is Node.js? 
-<h4>Node.js is a JavaScript free and open source cross-platform runtime environment for executing JavaScript code outside of a browser. We often use it to build backend services also called api's (application programming interface) that power our client applcations like a web app running inside of a web browser or mobile app running on a mobile device. These apps are simply what the user sees and interacts with. They are just the surface. They need to talk to some services sitting on the server or in the cloud to store data, send emails, or push notifications and so on. Node is ideal for building highly scalable data-intensive and real-time backend services that power our client applciations. But there are other backend services framework such as rails, Django and so on. Why use Node.js?
+<p>Node.js is a JavaScript free and open source cross-platform runtime environment for executing JavaScript code outside of a browser. We often use it to build backend services also called api's (application programming interface) that power our client applcations like a web app running inside of a web browser or mobile app running on a mobile device. These apps are simply what the user sees and interacts with. They are just the surface. They need to talk to some services sitting on the server or in the cloud to store data, send emails, or push notifications and so on. Node is ideal for building highly scalable data-intensive and real-time backend services that power our client applciations. But there are other backend services framework such as rails, Django and so on. Why use Node.js?
 
 ---
 
 ## Why Use Node.js?
-<h4>Node is easy to get started and can be used building super fast and highly scalable services. It's used in production by large companies such as PayPal, Uber, Netflix, and Walmart. Node app was built twice as fast with fewer people. 33% fewer lines of code. and 40% fewer files. 2 times fast request per second while 35% faster response time. Node uses JS. If you are frontend developer using JS, you can also use Node.js to build backend quick. YOur source code is cleaner and consistent. Large ecosystem of open-source library, so a lot of things can be built using libraries. 
+<p>Node is easy to get started and can be used building super fast and highly scalable services. It's used in production by large companies such as PayPal, Uber, Netflix, and Walmart. Node app was built twice as fast with fewer people. 33% fewer lines of code. and 40% fewer files. 2 times fast request per second while 35% faster response time. Node uses JS. If you are frontend developer using JS, you can also use Node.js to build backend quick. YOur source code is cleaner and consistent. Large ecosystem of open-source library, so a lot of things can be built using libraries. </p>
 ---
 
 ## How to set up a node server?
