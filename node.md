@@ -7,20 +7,23 @@
 ## Overview
 * Node.js is for asynchronous, non-blocking, I/O intensive, and fast applications (Not for CPU intensive)
 * Node.js uses a single thread with event looping (Analogy: a waiter can serve different tables while chef cooks food. Waiter does not have to wait to serve another table until food is served)
+* Node.js is an event driven programming which flow of execution is determined by the events like user clicks or other programming threads or query results from database. Events are handled by event handlers or event callbacks 
 ---
 
 ## Learning Objectives
 * Understanding the HTTP module and importing it in app.js file
 * Setting up the Node server using HTTP module
-* 
+* Understanding basic event-driven programming pardigm 
+  
 ---
 
 ## Vocabulary
-* Node or Node.js
+* Node(Node.js)
 * http module
 * response
 * request
-* event
+* event handlers
+* callbacks
 * listen 
 * node app.js
 * port
@@ -41,9 +44,50 @@
 
 ## How to set up a node server?
 ---
+Writing web apps with Node involves writing event handlers that get called when certain Node events occur. Let's see an example.
 
+1. Create a new folder, cd into the folder with your terminal or command prompt.
+   
+```terminal
+mkdir node-intro
+cd node-intro
+```
+2. Do an  ```npm init```, hit enter till you successfully create a ```package.json``` file in the root of the folder.
+3. Create an ```app.js``` file in the root folder, copy and paste the code below.
 
+```javascript
+//app.js
 
+//http module
+const http = require ('http'),
+
+    //createServer() method to create a server
+    server = http.createServer();
+
+//attach event handler for requests on the server object. 'on' method takes a second argument which is a callback. The callback takes two objects as arguments. The request and response objects which have information about incoming request and outgoing responses.
+server.on('request',(request,response)=> {
+    //attach some headers to the server's response (status code and content type)
+    response.writeHead(200, {'Content-Type':'text/plain'});
+    //writes to the web page
+    response.write('Hello World');
+    //close the response to the server
+    response.end();
+});
+
+//tell server to listen at port(3000) to see a demo of our web app while developing. The listen method takes a callback as second argument.
+server.listen(3000, ()=> {
+    console.log('Node server created at port 3000');
+});
+```
+
+4. In the command prompt, type in 
+```node server.js``` and hit enter. You'll see something similar to this. 
+```terminal
+node server.js
+//Node server started at port 3000
+```
+
+5. Open your browser and hit localhost:3000. You should see a ```Hello World``` message. 
 
 
 
