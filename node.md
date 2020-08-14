@@ -79,8 +79,8 @@ console.log('Node server running on port 3000');
 4. In the command prompt, type in 
 ```node app.js``` and hit enter. You'll see something similar to this. 
 ```terminal
-node server.js
-//Node server started at port 3000
+node app.js
+//Node server running on port 3000
 ```
 
 5. Open your browser and visit 
