@@ -55,39 +55,36 @@ cd node-intro
 2. Do an  ```npm init```, hit enter till you successfully create a ```package.json``` file in the root of the folder.
 3. Create an ```app.js``` file in the root folder, copy and paste the code below.
 
-```javascript
+```Javascript
 //app.js
 
 //http module
-const http = require ('http'),
+const http = require ('http');
 
-    //createServer() method to create a server
-    server = http.createServer();
+//Pass a callback to the createServer() method, Node adds the request event handler for us.
+let app = http.createServer((request, response)=> {
+  //Attach some headers to the server's response(Status code and content type)
+  response.writeHead(200, {'Content-Type':'text/plain'});
+  //Send back a response and end the connection to the server
+  response.end('Hello World!\n');
+  };
 
-//attach event handler for requests on the server object. 'on' method takes a second argument which is a callback. The callback takes two objects as arguments. The request and response objects which have information about incoming request and outgoing responses.
-server.on('request',(request,response)=> {
-    //attach some headers to the server's response (status code and content type)
-    response.writeHead(200, {'Content-Type':'text/plain'});
-    //writes to the web page
-    response.write('Hello World');
-    //close the response to the server
-    response.end();
-});
 
-//tell server to listen at port(3000) to see a demo of our web app while developing. The listen method takes a callback as second argument.
-server.listen(3000, ()=> {
-    console.log('Node server created at port 3000');
-});
+
+//Tells server to listen at port(3000) to see a demo of our web app while developing. 
+app.listen(3000, '127.0.0.1');
+console.log('Node server running on port 3000');
 ```
 
 4. In the command prompt, type in 
-```node server.js``` and hit enter. You'll see something similar to this. 
+```node app.js``` and hit enter. You'll see something similar to this. 
 ```terminal
 node server.js
 //Node server started at port 3000
 ```
 
-5. Open your browser and hit localhost:3000. You should see a ```Hello World``` message. 
+5. Open your browser and visit 
+   http://localhost:3000. You should see a ```Hello World!``` message. 
 
 
 
