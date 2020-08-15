@@ -1,7 +1,8 @@
 # Setting Up A Node Server
 
 ## Video Lecture
----
+<p>Coming Soon!
+
 
 
 ## Overview
